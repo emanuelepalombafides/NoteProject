@@ -1,0 +1,49 @@
+package com.restful.rest_jersey_example.model;
+
+import javax.xml.bind.annotation.XmlRootElement;
+import javax.xml.bind.annotation.XmlElement;
+
+@XmlRootElement
+public class Note {
+
+	private int id;
+	private String title;
+	private String author;
+	
+	public Note() {
+		super();
+	}
+
+	public Note(int id, String title, String author) {
+		super();
+		this.id = id;
+		this.title = title;
+		this.author = author;
+	}
+	
+	@XmlElement
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	@XmlElement
+	public String getTitle() {
+		return title;
+	}
+	public void setTitle(String title) {
+		this.title = title;
+	}
+	
+	@XmlElement
+	public String getAuthor() {
+		return author;
+	}
+	public void setAuthor(String author) {
+		this.author = author;
+	}
+	
+	
+}
